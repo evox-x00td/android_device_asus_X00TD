@@ -26,3 +26,6 @@ type sysfs_tbrightness, sysfs_type, fs_type;
 type sysfs_msmthermal, sysfs_type, fs_type;
 type sysfs_corecontrol, sysfs_type, fs_type;
 type sysfs_vddrestrict, sysfs_type, fs_type;
+
+# /sys/android_touch/doubletap2wake
+type sysfs_dt2w, fs_type, sysfs_type;

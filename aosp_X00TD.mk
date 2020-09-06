@@ -19,19 +19,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit some common Havoc stuff
-$(call inherit-product, vendor/legion/config/common_full_phone.mk)
+# Inherit some common Evolution X stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-# Poduct spec
+#KeepEvolving
 TARGET_BOOT_ANIMATION_RES := 1080
-
-# Use Gapps
-WITH_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
-IS_PHONE := true
-
-#OFFICIAL
-LEGION_BUILD_TYPE := OFFICIAL
 
 # Inherit from X00TD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -39,7 +32,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := X00TD
 PRODUCT_MANUFACTURER := asus
-PRODUCT_NAME := legion_X00TD
+PRODUCT_NAME := aosp_X00TD
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus
 
